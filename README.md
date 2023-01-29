@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Getting Started with Paxtachi IT Center
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Houzing](https://github.com/Barat-Tojiyev/hoizinggroup).
+
+## can see Demo [Houzing](https://netlify.com/hoizinggroup).
 
 ## Available Scripts
 

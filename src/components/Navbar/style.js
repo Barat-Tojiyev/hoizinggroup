@@ -3,8 +3,14 @@ import styled from "styled-components";
 import { ReactComponent as logoImg} from '../../assets/icon/logo1.svg'
 
 export const Container=styled.div`
+/* 
+display: flex;
+flex-direction:column;
+align-items: center; */
+
 `
 export const Wrapper=styled.div`
+/* max-width: 1440px; */
 background:var(--colorPrimary);
 color:#fff;
 padding:var(--padding);
@@ -18,6 +24,10 @@ align-items: center;
 export const Section=styled.div`
 display: flex;
 align-items: center;
+cursor: ${({logo})=>logo&&'pointer'};
+.active{
+    color: red;
+}
 `
 export  const Logo =styled(logoImg)`
 width: 30px;
@@ -30,4 +40,6 @@ margin-right: 10px;
 export const Link=styled(NavLink)`
 text-decoration:none;
 color:#ffff;
-padding:0 30px;`
+padding:0 30px;
+
+`

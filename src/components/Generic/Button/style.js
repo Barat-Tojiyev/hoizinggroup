@@ -32,8 +32,8 @@ const getType=({type})=>{
 }
 
 export const Container=styled.button`
-width: ${({width})=>width  ?   ` ${width}px` : '100px'};
-height: ${({height})=>height  ?   ` ${height}px` : '34px'};
+width: ${({width})=>width  ?   ` ${width}px` : '130px'};
+height: ${({height})=>height  ?   ` ${height}px` : '44px'};
 display:flex;
 align-items:center;
 justify-content:center;

@@ -3,6 +3,7 @@ import {  Outlet , useNavigate} from 'react-router-dom'
 import { Container, Logo, Section, Wrapper,Link } from './style'
 import {navbar} from '../../utils/navbar'
 import Button from '../Generic/Button'
+import Filter from '../Filter'
 
 export const Home = () => {
   const navigate=useNavigate();
@@ -26,6 +27,7 @@ export const Home = () => {
           <Button onClick={()=>navigate('/singIn')} type='dark'>Login</Button>
         </Section>
       </Wrapper>
+      <Filter/>
         <Outlet />
     </Container>
   )

@@ -20,6 +20,7 @@ const Input=forwardRef(({
       placeholder={placeholder} 
       onChange={onChange} 
       name={name}
+      ref={ref}
       defaultValue={defaultValue}
       value={value}
       type={type} 

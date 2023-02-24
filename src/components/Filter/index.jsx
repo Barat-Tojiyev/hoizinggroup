@@ -52,7 +52,7 @@ const items = [
     <Container>
  
       <Input Icons={ <Icon.Home/>} icon placeholder='Enter an address, neighborhood, city, or ZIP code'/>   
-      <Dropdown onOpenChange={onOpenChange} open={open} menu={{items}}  placement="bottomRight" arrow>
+      <Dropdown onOpenChange={onOpenChange} open={open} menu={{items}}   placement="bottomRight" arrow>
       <div>
          <Button  type='light'> <Icon.Setting/> Advanced</Button>   
       </div>

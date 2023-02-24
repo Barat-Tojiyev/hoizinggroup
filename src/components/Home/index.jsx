@@ -1,7 +1,6 @@
 
 import React from 'react'
 import CarouselCard from '../Carousel'
-import HouseCard from '../HouseCard'
 
 
 
@@ -12,7 +11,7 @@ export const Home = () => {
   return (
     <Container>
       <CarouselCard/>
-      <HouseCard/>
+    
     </Container>
   )
 }

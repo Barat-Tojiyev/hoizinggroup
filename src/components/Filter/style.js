@@ -4,12 +4,16 @@ import {VscSettings} from 'react-icons/vsc'
 import {ReactComponent as homes} from '../../assets/icon/homes.svg'
 
 export const Container=styled.div`
+
 padding: var(--padding);
 padding-top: 15px;
 padding-bottom: 15px;
 display: flex;
 align-items: center;
 gap: 20px;
+width: 100%;
+max-width:1440px;
+margin: auto;
 `
 export const Icon=styled.div`
 

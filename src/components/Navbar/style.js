@@ -3,15 +3,24 @@ import styled from "styled-components";
 import { ReactComponent as logoImg} from '../../assets/icon/logo1.svg'
 
 export const Container=styled.div`
-/* 
+
 display: flex;
 flex-direction:column;
-align-items: center; */
+align-items: center;
 
 `
-export const Wrapper=styled.div`
-/* max-width: 1440px; */
+export const Main=styled.div`
 background:var(--colorPrimary);
+display: flex;
+flex-direction: column;
+/* justify-content: center; */
+width: 100%;
+`
+export const Wrapper=styled.div`
+width: 100%;
+max-width: 1440px;
+margin: auto;
+
 color:#fff;
 padding:var(--padding);
 height: 64px;

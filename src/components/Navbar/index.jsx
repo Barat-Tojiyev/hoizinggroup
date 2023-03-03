@@ -1,6 +1,6 @@
 import React from 'react'
 import {  Outlet , useNavigate} from 'react-router-dom'
-import { Container, Logo, Section, Wrapper,Link } from './style'
+import { Container, Logo, Section, Wrapper,Link, Main } from './style'
 import {navbar} from '../../utils/navbar'
 import Button from '../Generic/Button'
 import Filter from '../Filter'
@@ -10,6 +10,7 @@ export const Home = () => {
   const navigate=useNavigate();
   return (
     <Container>
+      <Main>
       <Wrapper>
         <Section logo onClick={() => navigate('/home')}>
           <Logo/>
@@ -28,9 +29,9 @@ export const Home = () => {
           <Button onClick={()=>navigate('/singIn')} type='dark'>Login</Button>
         </Section>
       </Wrapper>
-      <Filter/>
-     
-        <Outlet />
+      </Main>
+      <Filter/>     
+      <Outlet />
     </Container>
   )
 }

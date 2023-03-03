@@ -11,11 +11,13 @@ height: 430px;
 width: 380px;
 border-radius: 3px;
 overflow: hidden;
-margin: 100px;
+border: 1px solid #999;
 `
 const Image =styled.img`
 width: 100%;
 height: 220px;
+min-height: 220px;
+max-height: 220px;
 `
 const Content =styled.div`
 padding: 20px;

@@ -2,8 +2,9 @@ import styled from "styled-components";
 import {ReactComponent as arrow} from '../../assets/icon/arrow.svg'
 
 const Container=styled.div`
-height: 571px;
+max-height: 571px;
 position: relative;
+width: 100%;
 `
 
 const Arrow=styled(arrow)`
@@ -75,6 +76,6 @@ line-height: 36px;
 `
 
 const Image=styled.img`
-width:100%;
-height:571px;`
+  width:100%;
+ height:571px;`
 export{Container, Arrow, Image, Blur, Content,ArrowLeft}

@@ -15,8 +15,8 @@ const {
   houseDetails,
   salePrice,
   price,
-  attachments
-
+  attachments,
+  category
 
 
 }=data
@@ -28,7 +28,7 @@ const {
  || noImg} alt='#' />
       <Content>
         <div className="subTitle inline">{city}, {country}, {description}</div>
-        <div className="info">{address || 'Quincy St, Brooklyn, NY, USA'}</div>
+        <div className="info">{address || 'Quincy St, Brooklyn, NY, USA'}, {category?.name || 'Category'}</div>
         <Swagger>
           <Swagger.Item>
             <Swagger.Bath />

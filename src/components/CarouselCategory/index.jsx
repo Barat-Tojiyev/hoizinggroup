@@ -30,7 +30,7 @@ export const CarouselCategory= () => {
         
     <Slider {...settings}>
     {data.map((value)=>{
-        return  <CategoryCard data={value}/>
+        return  <CategoryCard key={value.id} data={value}/>
       })}
     </Slider>
     </Container>

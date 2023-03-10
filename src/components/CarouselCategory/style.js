@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {ReactComponent as arrow} from '../../assets/icon/arrow.svg'
+
 
 const Container=styled.div`
 

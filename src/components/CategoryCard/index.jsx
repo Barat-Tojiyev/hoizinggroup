@@ -5,12 +5,12 @@ import CategoryImg from '../../assets/img/CategoryHome.png'
 
 
 
-export const CategoryCard = ({data={}}) => {
-const {id,name }=data
+export const CategoryCard = ({data={},onClick}) => {
+const {name }=data
 
 
   return (
-    <Container>
+    <Container onClick={onClick}>
       <Blur/>
       <Content>{name ||'Category'}</Content>
       <Image src={  CategoryImg} alt='#' />

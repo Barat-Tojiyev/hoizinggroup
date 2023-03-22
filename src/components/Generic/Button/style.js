@@ -38,6 +38,9 @@ display:flex;
 align-items:center;
 justify-content:center;
 border-radius:2px;
+margin-right:${({mr})=>mr&&mr};
+margin-left:${({ml})=>ml&&ml};
+
 font-size:${({fontSize})=>fontSize ? fontSize :'14px'}  ;
 cursor: pointer;
 ${getType}

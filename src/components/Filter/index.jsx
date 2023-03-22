@@ -1,11 +1,12 @@
 import { Dropdown } from 'antd'
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState,useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import uzeReplase from '../../hooks/useReplase'
 import useSearch from '../../hooks/useSearch'
 import { Button, Input } from '../Generic'
-import { Container, Icon,Section,Wrapper } from './style'
+import { Container, Icon,Section,Wrapper,SelectAnt } from './style'
 
+const { REACT_APP_BASE_URL:url}=process.env;
 
 export const Filter = () => {
 
@@ -20,9 +21,18 @@ export const Filter = () => {
   const zipCodeRef=useRef()
   const roomsRef=useRef()
   const sizeRef=useRef()
-  const sortRef=useRef()
+  // const sortRef=useRef()
   const minPriceRef=useRef()
   const maxPriceRef=useRef()
+
+  const [data,setData]=useState([])
+  useEffect(()=>{
+    fetch(`${url}/categories/list`)
+    .then((res)=>res.json())
+    .then((res)=>{
+      setData(res?.data || [])
+    })
+  },)
 
   const[open,setOpen]=useState(false)
   const onOpenChange=()=>{
@@ -33,6 +43,11 @@ export const Filter = () => {
   }
  
   // console.log(useReplase('address','Tashkent'));
+  let onChangeCategory=(category_id)=>{
+    console.log(category_id);
+    navigate(`/properties${uzeReplase('category_id',category_id)}`)
+    
+  }
 const items = [
   {
     key: '1',
@@ -49,7 +64,20 @@ const items = [
  <Section>
    <Input ref={roomsRef} placeholder='Rooms'/>
    <Input ref={sizeRef} placeholder='Size'/>
-  <Input ref={sortRef} placeholder='Sort'/></Section>
+  {/* <Input ref={sortRef} placeholder='Sort'/> */}
+  <SelectAnt onChange={onChangeCategory} defaultValue='Category' >
+    {
+      data.map((value)=>{
+        return(
+       <SelectAnt.Option key={value.id} value={value?.id}>{value?.name}</SelectAnt.Option>
+        )
+      })
+    }
+    
+  
+  </SelectAnt>
+  
+  </Section>
  <h1 className='subTitle'>Price</h1>
  <Section>
  <Input ref={minPriceRef} placeholder='Min price'/>

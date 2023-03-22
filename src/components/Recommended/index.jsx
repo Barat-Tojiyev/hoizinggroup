@@ -1,23 +1,28 @@
 import React, { useEffect,useState } from 'react'
 import {  Container, Content } from './style'
-import CategoryCard from '../CategoryCard'
+import HouseCard from '../HouseCard'
 import Slider from "react-slick";
-import { useNavigate } from 'react-router-dom';
 
 const { REACT_APP_BASE_URL:url}=process.env;
 
-export const CarouselCategory= () => {
+export const Recommended= () => {
    
-  let navigate=useNavigate()
   const [data,setData]=useState([])
+  // useEffect(()=>{
+  //   fetch(`${url}/categories/list`)
+  //   .then((res)=>res.json())
+  //   .then((res)=>{
+  //     setData(res?.data || [])
+  //   })
+  // },)
   useEffect(()=>{
-    fetch(`${url}/categories/list`)
+    fetch(`${url}/houses/list`)
     .then((res)=>res.json())
     .then((res)=>{
       setData(res?.data || [])
     })
-  },)
-
+  },[])
+  
   const settings = {
           dots: true,
           infinite: true,
@@ -29,21 +34,20 @@ export const CarouselCategory= () => {
      
   return (
     <Container>
-      <div className="title">Category</div>
-      <div className="info">Nulla quis curabitur 
-      velit volutpat auctor bibendum consectetur sit.</div>
+      <div className="title">Recommended</div>
+      <div className="info">Nulla quis curabitur velit
+       volutpat auctor bibendum consectetur sit.</div>
         <Content>
     <Slider {...settings}>
     {data.map((value)=>{
-        return  <CategoryCard onClick={()=>navigate(`/properties?category_name=${value.name}`)}
-         key={value.id} data={value}/>
+        return  <HouseCard key={value.id} data={value}/>
       })}
     </Slider>
         </Content>
     </Container>
   )
 }
-export default CarouselCategory
+export default Recommended
 
 // import React, { Component } from "react";
 // 

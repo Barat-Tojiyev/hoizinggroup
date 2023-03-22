@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {BsSearch} from 'react-icons/bs'
 import {VscSettings} from 'react-icons/vsc'
 import {ReactComponent as homes} from '../../assets/icon/homes.svg'
+import { Select } from "antd";
 
 export const Container=styled.div`
 
@@ -42,4 +43,18 @@ margin-bottom: 20px;
 /* background: ${({footer})=>footer? "#eee":'#fff'}; */
 justify-content:${({footer})=>footer? "flex-end":'flex-start'} ;
 padding:${({footer})=>footer? "20px":'0px'} ;
+
+`
+
+export const SelectAnt=styled(Select)`
+width: 100%;
+min-width: 200px;
+max-width: 200px;
+.ant-select-selector{
+    height: 44px !important;
+}
+.ant-select-selection-item{
+    display: flex !important;
+    align-items: center !important;
+}
 `

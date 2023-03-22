@@ -4,6 +4,7 @@ import { Container, Logo, Section, Wrapper,Link, Main } from './style'
 import {navbar} from '../../utils/navbar'
 import Button from '../Generic/Button'
 import Filter from '../Filter'
+import { Footer } from '../Footer'
 
 
 export const Home = () => {
@@ -32,6 +33,7 @@ export const Home = () => {
       </Main>
       <Filter/>     
       <Outlet />
+      <Footer/>
     </Container>
   )
 }

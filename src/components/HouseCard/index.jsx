@@ -24,7 +24,7 @@ const {
 
   return (
     <Container>
-      <Image src={attachments && attachments[0].imgPath
+      <Image src={attachments || attachments[0]?.imgPath
  || noImg} alt='#' />
       <Content>
         <div className="subTitle inline">{city}, {country}, {description}</div>
